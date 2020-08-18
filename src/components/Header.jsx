@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ titulo }) => {
+
     return (
-        <h1>Desde el Header</h1>
+        <h1 className="encabezado">{titulo}</h1>
     );
 }
 
