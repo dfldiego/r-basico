@@ -1,13 +1,15 @@
 import React, { Fragment } from 'react'
 
-const Producto = ({ producto }) => {
+const Producto = ({ producto, carrito, productos, setCarrito }) => {
 
     //Destructuring del props
     const { id, nombre, precio } = producto;
 
     //Agregar producto al carrito
     const seleccionarProducto = (id) => {
-        console.log("comprando.... ", id);
+        const producto = productos.filter(producto => producto.id === id)[0];
+        //console.log(producto);
+        setCarrito([...carrito, producto]);
     }
 
     return (
