@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import './carrito.css';
 import Producto from './Producto';
 
-const Carrito = ({ carrito }) => (
+const Carrito = ({ carrito, setCarrito }) => (
     <Fragment>
         <div className="carrito">
             <h2>Tu carrito de Compras</h2>
@@ -15,6 +15,8 @@ const Carrito = ({ carrito }) => (
                     <Producto
                         key={producto.id}
                         producto={producto}
+                        carrito={carrito}
+                        setCarrito={setCarrito}
                     />
                 ))
             }

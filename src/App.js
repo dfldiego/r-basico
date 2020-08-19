@@ -36,6 +36,7 @@ function App() {
 
       <Carrito
         carrito={carrito}
+        setCarrito={setCarrito}
       />
 
       <Footer />
